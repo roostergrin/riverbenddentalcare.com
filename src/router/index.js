@@ -4,7 +4,11 @@ import Styleguide from '@/pages/styleguide/styleguide'
 import PageNotFound from '@/pages/404/404'
 import scrollBehavior from '@/shared/functionality/scroll-behavior'
 
-const Home = () => import('@/pages/home/home')
+const AboutPage = () => import('@/pages/about/about')
+const ContactPage = () => import('@/pages/contact/contact')
+const FinancialPage = () => import('@/pages/financial/financial')
+const HomePage = () => import('@/pages/home/home')
+const SimplyStraightPage = () => import('@/pages/simply-straight/simply-straight')
 
 Vue.use(VueRouter)
 
@@ -13,9 +17,33 @@ const router = new VueRouter({
   routes: [
     {
       path: '/',
-      name: 'home',
+      name: 'Home',
+      navigation: false,
+      component: HomePage
+    },
+    {
+      path: '/about',
+      name: 'About',
       navigation: true,
-      component: Home
+      component: AboutPage
+    },
+    {
+      path: '/simply-straight',
+      name: 'Simply Straight',
+      navigation: true,
+      component: SimplyStraightPage
+    },
+    {
+      path: '/financial',
+      name: 'Financial',
+      navigation: true,
+      component: FinancialPage
+    },
+    {
+      path: '/contact',
+      name: 'Contact',
+      navigation: true,
+      component: ContactPage
     },
     {
       path: '/styleguide',

@@ -5,17 +5,17 @@
 .container
   @include desktop
     max-width: $max-width
+  @include phone-lg
+    padding: 0 1rem
   display: flex
   flex-wrap: wrap
   margin: 0 auto
+  padding: 0 2rem
   width: 100%
-  max-width: $width
+  max-width: $gutter-width
 
   &--large
+    @extend .container
     @include desktop
       max-width: $max-width-large
-    display: flex
-    flex-wrap: wrap
-    margin: 0 auto
-    width: 100%
     max-width: $width-large

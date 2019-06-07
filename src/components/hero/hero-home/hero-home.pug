@@ -1,0 +1,10 @@
+.hero-home
+  .hero-home__overlay
+  .hero-home__rectangles
+    span
+    span
+  .hero-home__content
+    .hero-home__container
+      .hero-home__headline(v-html='props.headline')
+      .hero-home__subheader(v-html='props.subheader')
+  SliderMain(:props='props.images')      

@@ -1,5 +1,5 @@
-.pages-home(v-if='props') 
-  SliderMain(:props='props')
+.pages-home(v-if='props')
+  HeroHome(:props='props.hero')
   h1(style='fontWeight: 100; fontSize: 70px;') {{ props.title }} Page
   pre {{ props }}
   

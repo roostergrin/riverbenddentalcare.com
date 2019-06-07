@@ -1,7 +1,8 @@
 <template lang="pug" src="./home.pug"></template>
 
 <script>
-import SliderMain from 'components/slider/slider-main'
+import HeroHome from 'components/hero/hero-home/hero-home'
+
 export default {
   computed: {
     props () {
@@ -9,7 +10,7 @@ export default {
     }
   },
   components: {
-    SliderMain
+    HeroHome
   }
 }
 </script>

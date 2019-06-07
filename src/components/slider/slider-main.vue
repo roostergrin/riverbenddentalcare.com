@@ -22,10 +22,10 @@ export default {
   },
   methods: {
     getSlideLength () {
-      this.slides = this.props.hero.length
+      this.slides = this.props.length
     },
     autoplay () {
-      if (this.activeSlide === (this.props.hero.length - 1)) {
+      if (this.activeSlide === (this.props.length - 1)) {
         this.lastSlide = true
         this.activeSlide = 0
       } else {

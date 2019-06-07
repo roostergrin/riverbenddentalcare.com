@@ -1,5 +1,5 @@
 .slider-main__wrapper
-  .slider-main__section(v-for='slide, i in props.hero', :key='i', :class="{ 'slider-main__section--first': i === 0 && activeSlide === (props.hero.length - 1), 'slider-main__section--scrolled': activeSlide > i, 'slider-main__section--not-scrolled': activeSlide < i, 'slider-main__section--active': activeSlide === i, 'slider-main__section--last': i === (props.hero.length - 1) && lastSlide }")
+  .slider-main__section(v-for='slide, i in props', :key='i', :class="{ 'slider-main__section--first': i === 0 && activeSlide === (props.length - 1), 'slider-main__section--scrolled': activeSlide > i, 'slider-main__section--not-scrolled': activeSlide < i, 'slider-main__section--active': activeSlide === i, 'slider-main__section--last': i === (props.length - 1) && lastSlide }")
     .slider-main__image(:style="{ backgroundImage: 'url(' + slide.image + ')' }")
       
   .slider-main__pagination

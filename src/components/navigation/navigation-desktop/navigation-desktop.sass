@@ -1,3 +1,85 @@
 .navigation-desktop
-  span
-    margin: auto rem-calc(6)
+  position: fixed
+  top: 0
+  left: 0
+  transform: translateZ(0)
+  // transition: background .4s ease-in, box-shadow .3s ease-in
+  z-index: 9999
+  padding: 1rem 0
+  width: 100%
+
+  &__navbar
+    @include desktop
+      max-width: $max-width-large
+    display: flex
+    position: relative
+    align-items: center
+    justify-content: flex-end
+    margin: 0 auto
+    padding: 0 2rem
+    width: 100%
+    max-width: 1296px
+    height: 80px
+
+  &__home
+    position: absolute
+    top: 0
+    left: 2rem
+
+  &__logo
+    width: auto
+    height: 80px
+
+  &__menu
+    display: flex
+
+  &__nav-item
+    position: relative
+
+    &:not(:first-child)
+      margin-left: 1rem
+
+    &:hover
+      color: $c2
+
+      &:before
+        transition: width 0.28s cubic-bezier(.39, .575, .28, .995)
+        background: $c2
+        width: 100%
+
+      &:after
+        transition: all 0s ease
+        background: transparent
+        width: 100%
+
+    &:before, &:after
+      display: block
+      position: absolute
+      bottom: rem-calc(-3)
+      width: 0
+      height: rem-calc(3)
+      content: ''
+
+    &:before
+      left: 0
+      transition: width 0s ease, background 0.2s ease
+
+    &:after
+      right: 0
+      transition: width 0.28s cubic-bezier(.39, .575, .28, .995)
+      background-color: $c2
+
+    .router-link-exact-active
+      color: $c1
+
+  &__link
+    @include desktop
+      font-size: 19px
+    transition: color .2s ease
+    text-transform: uppercase
+    letter-spacing: .067px
+    color: $c2
+    font-family: $font-alt
+    font-size: 18px
+    font-weight: 400
+    -webkit-text-stroke: .5px

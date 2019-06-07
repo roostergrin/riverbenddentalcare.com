@@ -1,7 +1,7 @@
 <template lang="pug" src="./app.pug"></template>
 
 <script>
-import NavigationDesktop from 'components/navigation/navigation-desktop/navigation-desktop'
+import TheNavigation from 'components/navigation/navigation'
 
 export default {
   async created () {
@@ -11,7 +11,7 @@ export default {
     this.$store.dispatch('SET_SCROLLED', false)
   },
   components: {
-    NavigationDesktop
+    TheNavigation
   }
 }
 </script>

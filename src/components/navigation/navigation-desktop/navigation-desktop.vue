@@ -2,9 +2,15 @@
 
 <script>
 export default {
-  computed: {
-    links () {
-      return this.$router.options.routes
+  props: {
+    props: {
+      Type: Object
+    },
+    links: {
+      Type: Array
+    },
+    scrolling: {
+      Type: Boolean
     }
   }
 }

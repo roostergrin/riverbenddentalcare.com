@@ -1,3 +1,10 @@
 .navigation-desktop
-  span(v-for='link in links')
-    router-link(:to='link.path', v-html='link.name')
+  .navigation-desktop__navbar
+    router-link.navigation-desktop__home(to='/')
+      img.navigation-desktop__logo(src='/static/simply-straight-logo.png', alt='Simply Straight by Snow Logo')
+        
+    .navigation-desktop__nav-primary
+      ul.navigation-desktop__menu
+        li.navigation-desktop__nav-item(v-for='link, i in links', :key='i')
+          router-link.navigation-desktop__link(:to='link.path' v-html='link.name')    
+  

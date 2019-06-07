@@ -9,7 +9,7 @@ var WebFont = require('webfontloader')
 const fonts = () => {
   WebFont.load({
     google: {
-      families: [ 'Open+Sans:400,600' ]
+      families: [ 'Roboto:100,400', 'Roboto+Condensed:300,400,700' ]
     }
   })
 }

@@ -1,0 +1,53 @@
+.slider-main
+  &__wrapper
+    position: relative
+    width: 100%
+    height: 100vh
+    overflow: hidden
+
+  &__section
+    position: absolute
+    transform: translate3d(100%, 0, 0)
+    transition: transform .65s cubic-bezier(.52, .01, .16, 1)
+    z-index: -1
+    width: 100%
+    height: 100%
+    overflow: hidden
+    will-change: transform
+
+    &--not-scrolled
+      transform: translate3d(100%, 0, 0)
+
+    &--scrolled,
+    &--last
+      transform: translate3d(-100%, 0, 0)
+      z-index: 1
+
+    &--scrolled
+      &.slider-main__section--first
+        transform: translate3d(100%, 0, 0)
+
+    &--active
+      transform: translate3d(0, 0, 0)
+      z-index: 2
+
+  &__image
+    @extend .image--bg
+
+  &__pagination
+    display: flex
+    position: absolute
+    right: 5rem
+    bottom: 1.5rem
+
+  &__indicator
+    transition: background .2s ease
+    z-index: 5
+    margin: 0 6px
+    border-radius: 50%
+    background: $white
+    width: .8rem
+    height: .8rem
+
+    &--active
+      background: $c2

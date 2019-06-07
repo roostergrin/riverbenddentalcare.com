@@ -1,7 +1,7 @@
 <template lang="pug" src="./home.pug"></template>
 
 <script>
-
+import SliderMain from 'components/slider/slider-main'
 export default {
   computed: {
     props () {
@@ -9,6 +9,7 @@ export default {
     }
   },
   components: {
+    SliderMain
   }
 }
 </script>

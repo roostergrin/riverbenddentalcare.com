@@ -1,4 +1,5 @@
-.pages-home(style='marginTop: 100px;' v-if='props') 
+.pages-home(v-if='props') 
+  SliderMain(:props='props')
   h1(style='fontWeight: 100; fontSize: 70px;') {{ props.title }} Page
   pre {{ props }}
   

@@ -1,4 +1,4 @@
-.navigation-desktop
+.navigation-desktop(:class="{ 'navigation-desktop--scrolling': scrolling}")
   .navigation-desktop__navbar
     router-link.navigation-desktop__home(to='/')
       img.navigation-desktop__logo(src='/static/simply-straight-logo.png', alt='Simply Straight by Snow Logo')

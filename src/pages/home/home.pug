@@ -1,5 +1,6 @@
 .pages-home(v-if='props')
   HeroHome(:props='props.hero')
+  CustomWelcome(:props='props.welcome')
   h1(style='fontWeight: 100; fontSize: 70px;') {{ props.title }} Page
   pre {{ props }}
   

@@ -3,13 +3,16 @@
 
 body
   @include desktop
+    font-size: 24px
+  @include tablet-lg
     font-size: 18px
-  @include phone
-    font-size: 14px
   text-rendering: optimizeLegibility
   line-height: 1.467
+  letter-spacing: .467px
+  color: $c4
   font-family: $font
-  font-size: 16px
+  font-size: 21px
+  font-weight: 300
   -webkit-font-smoothing: antialiased
   -moz-osx-font-smoothing: grayscale
 
@@ -39,7 +42,7 @@ p
   margin: 0
 
 ul
-  padding: 0  
+  padding: 0
 
 li
   list-style: none

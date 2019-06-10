@@ -4,37 +4,22 @@
 
 @for $i from 1 through $columns
   .col-#{$i}
-    @include tablet-lg
+    @include tablet
       width: 100%
     padding: 0 calc(#{$gutter} / 2)
     width: calc((#{$i} / #{$columns}) * 100% - .1px)
 
     .container--large &
-      @include tablet-lg
+      @include tablet
         width: 100%
       width: calc(#{$i} / #{$columns-large} * 100% - .1px)
 
-    &--tablet
-      @include tablet-lg
-        padding: 0 calc(#{$gutter} / 2)
-        width: calc((#{$i} / #{$columns}) * 100% - .1px)
-
-      .container--large &
-        @include tablet-lg
-          width: calc(#{$i} / #{$columns-large} * 100% - .1px)
-        @include phone-lg
-          width: 100%
-
-      @include phone-lg
-        width: 100%
-
-
     &--offset
-      @include tablet-lg
+      @include tablet
         margin-left: 0
       margin-left: calc((#{$i} / #{$columns}) * 100% - .1px)
 
       .container--large &
-        @include tablet-lg
+        @include tablet
           margin-left: 0
         margin-left: calc((#{$i} / #{$columns-large}) * 100% - .1px)

@@ -10,20 +10,16 @@
   @media screen and (max-width: $screen-laptop)
     @content
 
-@mixin tablet-lg
-  @media screen and (max-width: $screen-tablet-lg) and (max-height: 1366px)
+@mixin ipad-pro
+  @media screen and (max-width: $screen-tablet-lg) and (min-height: 1366px)
     @content
 
-@mixin tablet-land-lg
-  @media screen and (max-width: 1366px) and (max-height: $screen-tablet-lg)
+@mixin tablet-lg
+  @media screen and (max-width: $screen-tablet-lg)
     @content
 
 @mixin tablet
   @media screen and (max-width: $screen-tablet)
-    @content
-
-@mixin tablet-land
-  @media screen and (max-width: $screen-tablet-lg) and (max-height: $screen-tablet)
     @content
 
 @mixin phone-lg

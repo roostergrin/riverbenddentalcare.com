@@ -8,6 +8,7 @@ export default {
     this.$store.dispatch('GET_APP')
     // this.$store.dispatch('GET_BLOG')
     this.$store.dispatch('GET_PAGES')
+    this.$store.dispatch('GET_INSTAGRAM')
     this.$store.dispatch('SET_SCROLLED', false)
   },
   components: {

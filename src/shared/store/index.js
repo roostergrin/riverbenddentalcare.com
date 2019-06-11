@@ -11,7 +11,8 @@ const store = new Vuex.Store({
     // blog: {},
     loading: true,
     pages: {},
-    scrolled: {}
+    scrolled: {},
+    insta: {}
   },
   mutations: mutations,
   actions: actions

@@ -1,7 +1,8 @@
 import {
   GET_APP,
   GET_PAGES,
-  SET_SCROLLED
+  SET_SCROLLED,
+  GET_INSTAGRAM
 } from './mutation-types.js'
 
 const mutations = {
@@ -17,6 +18,9 @@ const mutations = {
   },
   [SET_SCROLLED] (state, data) {
     state.scrolled = data
+  },
+  [GET_INSTAGRAM] (state, data) {
+    state.insta = data
   }
 }
 

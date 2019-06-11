@@ -1,0 +1,17 @@
+.custom-home-instagram
+  .custom-home-instagram__upper
+    .custom-home-instagram__overlay
+    .custom-home-instagram__triangle  
+    .custom-home-instagram__banner(:style="{ backgroundImage: 'url(' + props.image + ')' }")
+    .custom-home-instagram__container
+      .custom-home-instagram__header(v-html='props.header')
+      .custom-home-instagram__content
+        .custom-home-instagram__text(v-html='props.text')
+        a.custom-home-instagram__link(:href='props.link' target='_blank' rel='noopener noreferrer') Follow Us
+        AppIcon.custom-home-instagram__icon(name='arrow')  
+          
+  .custom-home-instagram__lower
+    .custom-home-instagram__feed-wrapper
+      .custom-home-instagram__thumb(v-for='post, i in feed', :key='i', :href='post.link' target='_blank' rel='noopener noreferrer')
+        img.custom-home-instagram__image(:src='post.image')
+        

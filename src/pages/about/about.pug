@@ -1,3 +1,3 @@
-.pages-about(style='marginTop: 100px;' v-if='props') 
+.pages-about(v-if='props')
+  HeroPages(:props='props.hero')
   h1(style='fontWeight: 100; fontSize: 70px;') {{ props.title }} Page
-  pre {{ props }}

@@ -1,0 +1,42 @@
+.hero-pages
+  @include phone-lg
+    height: rem-calc(280)
+  position: relative
+  width: 100%
+  height: rem-calc(380)
+
+  &__bg
+    @extend .image--bg
+    z-index: -1
+
+    .pages-about &
+      @include phone-lg
+        background-position: 55%
+
+    .pages-simply-straight &
+      @include phone-lg
+        background-position: 55%
+
+    .pages-financial &
+      @include phone-lg
+        background-position: 58%
+
+    .pages-contact &
+      @include phone-lg
+        background-position: 42%
+
+  &__overlay
+    @extend .overlay
+    background: linear-gradient(top, $c3, rgba($black, 0))
+
+  &__title
+    position: absolute
+    top: 50%
+    left: 50%
+    transform: translate(-50%, -50%)
+    text-transform: uppercase
+    color: $c2
+    font-size: 50px
+
+    .pages-about &
+      color: $white

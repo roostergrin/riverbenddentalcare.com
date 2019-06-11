@@ -1,3 +1,3 @@
-.pages-contact(style='marginTop: 100px;' v-if='props') 
+.pages-contact(v-if='props')
+  HeroPages(:props='props.hero')
   h1(style='fontWeight: 100; fontSize: 70px;') {{ props.title }} Page
-  pre {{ props }}

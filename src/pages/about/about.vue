@@ -2,6 +2,7 @@
 
 <script>
 import HeroPages from 'components/hero/hero-pages/hero-pages'
+import InstagramGrid from 'block/block-instagram-grid/block-instagram-grid'
 
 export default {
   computed: {
@@ -10,7 +11,8 @@ export default {
     }
   },
   components: {
-    HeroPages
+    HeroPages,
+    InstagramGrid
   }
 }
 </script>

@@ -4,6 +4,10 @@
       img.navigation-desktop__logo(src='/static/simply-straight-logo.png', alt='Simply Straight by Snow Logo')
         
     .navigation-desktop__nav-primary
+      .navigation-desktop__phone
+        .navigation-desktop__label Call Now: 
+        AppIcon.navigation-desktop__phone-icon(name='phone')
+        a.navigation-desktop__phone-number(:href='props.phone.phone_link' v-html='props.phone.phone_number')
       ul.navigation-desktop__menu
         li.navigation-desktop__nav-item(v-for='link, i in links', :key='i')
           router-link.navigation-desktop__link(:to='link.path' v-html='link.name')    

@@ -34,14 +34,41 @@
     width: auto
     height: 70px
 
-  &__menu
+  &__menu,
+  &__phone
     display: flex
+
+  &__phone
+    align-items: center
+    justify-content: flex-end
+    color: $c2
+    font-weight: 700
+
+  &__label
+    @extend .font-weight
+    margin-right: 8px
+    text-transform: uppercase
+    font-family: $font-alt
+
+  &__phone-icon
+    margin-right: 4px
+    width: 30px
+    height: 30px
+    fill: $c2
+
+  &__phone-number
+    transition: .2s ease
+    color: $c2
+    font-size: 26px
+
+    &:hover
+      color: $c1
 
   &__nav-item
     position: relative
 
     &:not(:first-child)
-      margin-left: 1rem
+      margin-left: 2rem
 
     &:hover
       color: $c2

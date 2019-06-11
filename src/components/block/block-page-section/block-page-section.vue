@@ -1,4 +1,4 @@
-<template lang="pug" src="./custom-home-sections.pug"></template>
+<template lang="pug" src="./block-page-section.pug"></template>
 
 <script>
 export default {

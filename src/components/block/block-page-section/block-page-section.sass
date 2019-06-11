@@ -1,4 +1,4 @@
-.custom-home-sections
+.block-page-section
 
   &__section
     position: relative
@@ -23,7 +23,7 @@
     width: 50%
     height: 100%
 
-    .custom-home-sections__section--alt &
+    .block-page-section__section--alt &
       left: 0
 
   &__container
@@ -32,10 +32,10 @@
   &__content
     @extend .col-5
     @include phone-lg
-      padding: 2rem 0  
+      padding: 2rem 0
     padding: 3rem 0
 
-    .custom-home-sections__section--alt &
+    .block-page-section__section--alt &
       @extend .col-7--offset
 
   &__title
@@ -46,7 +46,7 @@
     color: $c2
     font-size: 30px
 
-    .custom-home-sections__section--alt &
+    .block-page-section__section--alt &
       color: $white
 
 
@@ -60,23 +60,23 @@
     a
       transition: color .2s ease
 
-      .custom-home-sections__section--alt &
+      .block-page-section__section--alt &
         color: $white
 
     &:hover
       a
         color: $c2
 
-        .custom-home-sections__section--alt &
+        .block-page-section__section--alt &
           color: $c1
 
-      .custom-home-sections__icon
+      .block-page-section__icon
         transform: translateX(4px)
 
   &__text
     font-weight: 300
 
-    .custom-home-sections__section--alt &
+    .block-page-section__section--alt &
       color: $white
       // -webkit-text-stroke: .5px
 
@@ -87,5 +87,5 @@
     height: 34px
     fill: $c2
 
-    .custom-home-sections__section--alt &
+    .block-page-section__section--alt &
       fill: $c1

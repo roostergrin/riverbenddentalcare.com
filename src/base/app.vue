@@ -1,6 +1,7 @@
 <template lang="pug" src="./app.pug"></template>
 
 <script>
+import TheFooter from 'components/footer/footer'
 import TheNavigation from 'components/navigation/navigation'
 
 export default {
@@ -12,6 +13,7 @@ export default {
     this.$store.dispatch('SET_SCROLLED', false)
   },
   components: {
+    TheFooter,
     TheNavigation
   }
 }

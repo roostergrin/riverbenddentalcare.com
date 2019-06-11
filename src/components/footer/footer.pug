@@ -1,0 +1,23 @@
+footer.footer(v-if='props')
+  .footer__upper
+    .footer__container
+      .footer__item
+        .footer__title Call Today!
+        a.footer__phone(:href='props.phone.phone_link' v-html='props.phone.phone_number')
+      .footer__item
+        .footer__title Follow Us
+        .footer__social-media
+          a.footer__social-link(v-for='social, i in props.social', :key='i', :href='social.link')
+            AppIcon(:name='social.icon')
+      .footer__item
+        .footer__title Simply Straight
+        p NO-CREDIT CHECK
+        p 0% IN-HOUSE FINANCING AVAILABLE      
+  .footer__lower
+    .footer__container
+      .footer__copyright
+        | © {{ new Date().getFullYear() }} Simply Straight By Snow
+      .footer__roostergrin
+        | Online Advantage by #[a(href='https://www.roostergrin.com' target='_blank' rel='noopener noreferrer') RoosterGrin Media]                
+        
+      

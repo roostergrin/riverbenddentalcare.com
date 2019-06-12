@@ -20,7 +20,7 @@ export default {
       })
     },
     scrolling () {
-      return this.windowHeight > (window.innerHeight * 0.65)
+      return this.windowHeight > (window.innerHeight * 0.35)
     }
   },
   mounted () {

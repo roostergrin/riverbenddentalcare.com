@@ -9,6 +9,7 @@ const ContactPage = () => import('@/pages/contact/contact')
 const FinancialPage = () => import('@/pages/financial/financial')
 const HomePage = () => import('@/pages/home/home')
 const SimplyStraightPage = () => import('@/pages/simply-straight/simply-straight')
+const ThankYouPage = () => import('@/pages/thank-you/thank-you')
 
 Vue.use(VueRouter)
 
@@ -44,6 +45,11 @@ const router = new VueRouter({
       name: 'Contact',
       navigation: true,
       component: ContactPage
+    },
+    {
+      path: '/thank-you',
+      navigation: false,
+      component: ThankYouPage
     },
     {
       path: '/styleguide',

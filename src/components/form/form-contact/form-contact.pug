@@ -1,27 +1,34 @@
 .form-contact
-  .form-contact__thank-you(v-if='formSuccess')
-  form.form-contact__form(@submit.prevent='validate', method='post', v-if='!formSuccess')
+  form.form-contact__form(@submit.prevent='validate' method='post')
     
-    .form-contact__group
-      input.form-contact__input(name='name', v-model='fullname', v-validate="'required|alpha_spaces'", :class="{ 'form-contact__input--error': errors.has('name') }", type='text', placeholder='First and Last Name')
-      .form-contact__message
-          span(v-show="errors.has('name')") Your name is required.
+    .form-contact__group.form-contact__group--inline
+      .form-contact__item
+        label.form-contact__label Your First Name #[span.danger *]
+        input.form-contact__input(name='firstName', v-model='firstName', v-validate="'required|alpha_spaces'", :class="{ 'form-contact__input--error': errors.has('firstName') && !formSuccess }", type='text')
+        .form-contact__message
+            span(v-show="errors.has('firstName') && !formSuccess") Please fill in your first name.
+          
+      .form-contact__item
+        label.form-contact__label Your Last Name #[span.danger *]
+        input.form-contact__input(name='lastName', v-model='lastName', v-validate="'required|alpha_spaces'", :class="{ 'form-contact__input--error': errors.has('lastName') && !formSuccess }", type='text')
+        .form-contact__message
+            span(v-show="errors.has('lastName') && !formSuccess") Please fill in your last name.      
     
-    .form-contact__group
-      input.form-contact__input(name='email', v-model='email', v-validate="'required|email'", :class="{ 'input': true, 'form-contact__input--error': errors.has('email') }", placeholder='Email')
-      .form-contact__message
-        span(v-show="errors.has('email')") Please Input a Valid Email
+    .form-contact__group.form-contact__group--inline
+      .form-contact__item
+        label.form-contact__label Your Email Address #[span.danger *]
+        input.form-contact__input(name='email', v-model='email', v-validate="'required|email'", :class="{ 'input': true, 'form-contact__input--error': errors.has('email') && !formSuccess }")
+        .form-contact__message
+          span(v-show="errors.has('email') && !formSuccess") Please enter a valid email.
     
-    .form-contact__group
-      input.form-contact__input(name='phone', v-model='phone', v-validate="'required|numeric'", :class="{ 'input': true, 'form-contact__input--error': errors.has('phone') }", placeholder='Phone Number')
-      .form-contact__message
-        span(v-show="errors.has('phone')") Please Input a Valid Phone Number
+      .form-contact__item.form-contact__item--not-required
+        label.form-contact__label Your Phone Number
+        input.form-contact__input(name='phone', v-model='phone')
     
-    .form-contact__group
-      textarea.form-contact__input.form-contact__input--textarea(name='message', v-model='message' placeholder='Message')
+    .form-contact__group.form-contact__group--not-required
+      label.form-contact__label Message
+      textarea.form-contact__input.form-contact__input--textarea(name='message', v-model='message' rows='3')
     
-    .form-contact__button-group
-      button.form-contact__submit-button(@click='validate', type='submit', :disabled='formSubmitted')
-        span Send
-      .form-contact__spinner(v-if='formSubmitted')
-        span Sending ...  
+    .form-contact__group--button
+      button.form-contact__submit-button(@click='validate' type='submit', :disabled='formSubmitted')
+        span Submit

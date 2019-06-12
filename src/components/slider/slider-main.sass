@@ -35,6 +35,10 @@
     @extend .image--bg
 
   &__pagination
+    @include phone-lg
+      left: 50%
+      transform: translateX(-50%)
+      z-index: 9
     display: flex
     position: absolute
     right: 5rem

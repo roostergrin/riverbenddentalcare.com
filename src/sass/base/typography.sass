@@ -16,14 +16,27 @@ body
   -webkit-font-smoothing: antialiased
   -moz-osx-font-smoothing: grayscale
 
+.font-weight
+  font-weight: 400
+  -webkit-text-stroke: .5px
+
 h1
-  line-height: 1.25
-  font-size: 36px
+  @include tablet
+    font-size: 36px
+  text-transform: uppercase
+  line-height: 1.15
+  letter-spacing: .867px
+  font-size: 55px
+  font-weight: 100
+  -webkit-text-stroke: .5px
 
 h2
-  line-height: 1.25
-  letter-spacing: 2.8px
-  font-size: 22px
+  @extend .font-weight
+  margin: 0
+  text-transform: uppercase
+  letter-spacing: .867px
+  font-family: $font-alt
+  font-size: 30px
 
 h3
   line-height: 1.12
@@ -52,10 +65,6 @@ li
   line-height: 1.25
   font-size: 52px
   font-weight: bold
-
-.font-weight
-  font-weight: 400
-  -webkit-text-stroke: .5px
 
 .p3
   font-size: 12px

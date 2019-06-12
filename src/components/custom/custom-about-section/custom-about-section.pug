@@ -1,0 +1,9 @@
+.custom-about-section
+  .custom-about-section__container
+    .custom-about-section__content
+      h1.custom-about-section__title(v-html='props.title')
+      .custom-about-section__text--intro(v-html='props.intro')
+      .custom-about-section__text--main(v-html='props.text')
+    //- .custom-about-section__col--right
+    //-   .custom-about-section__image(:style="{ backgroundImage: 'url(' + props.image + ')' }")
+    //-     img.sr-only(:src='props.image', :alt='props.title')

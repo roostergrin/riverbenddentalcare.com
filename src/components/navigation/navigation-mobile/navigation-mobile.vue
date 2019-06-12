@@ -1,0 +1,32 @@
+<template lang="pug" src="./navigation-mobile.pug"></template>
+
+<script>
+export default {
+  data () {
+    return {
+      menuActive: false
+    }
+  },
+  props: {
+    props: {
+      Type: Object
+    },
+    links: {
+      Type: Array
+    },
+    scrolling: {
+      Type: Boolean
+    }
+  },
+  methods: {
+    toggleMenu () {
+      this.menuActive = !this.menuActive
+      this.menuActive ? document.body.classList.add('body-stop') : document.body.classList.remove('body-stop')
+    },
+    closeMenu () {
+      this.menuActive = false
+      document.body.classList.remove('body-stop')
+    }
+  }
+}
+</script>

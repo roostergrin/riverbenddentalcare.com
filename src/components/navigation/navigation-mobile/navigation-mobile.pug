@@ -1,0 +1,18 @@
+.navigation-mobile
+  .navigation-mobile__navbar
+    router-link.navigation-mobile__home(to='/' @click.native='closeMenu')
+      img.navigation-mobile__logo(src='/static/simply-straight-logo.png', alt='Simply Straight by Snow Logo')
+    
+    .navigation-mobile__hamburger(@click='toggleMenu', :class='{"navigation-mobile__hamburger--active": menuActive }')
+      span
+      span
+      span
+      span
+      
+  transition(name='fade')
+    .navigation-mobile__overlay(v-if='menuActive')
+  transition(name='drawer-slide')
+    .navigation-mobile__drawer(v-if='menuActive', :class="{ 'navigation-mobile__drawer--open': menuActive }")
+      ul.navigation-mobile__menu
+        li.navigation-mobile__item(v-for='link, i in links', :key='i')
+          router-link.navigation-mobile__link(:to='link.path' v-html='link.name' @click.native='closeMenu')

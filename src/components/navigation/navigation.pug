@@ -1,2 +1,3 @@
 nav.navigation(v-if='props')
-  Desktop(:props='props', :links='links', :scrolling='scrolling')
+  Desktop.navigation--desktop(:props='props', :links='links', :scrolling='scrolling')
+  Mobile.navigation--mobile(:props='props', :links='links', :scrolling='scrolling')

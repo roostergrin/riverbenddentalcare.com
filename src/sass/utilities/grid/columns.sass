@@ -6,6 +6,8 @@
   .col-#{$i}
     @include tablet
       width: 100%
+    @include phone-lg
+      padding: 0
     padding: 0 calc(#{$gutter} / 2)
     width: calc((#{$i} / #{$columns}) * 100% - .1px)
 

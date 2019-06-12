@@ -1,4 +1,4 @@
-.navigation-mobile
+.navigation-mobile(:class="{ 'navigation-mobile--scrolling': scrolling}")
   .navigation-mobile__navbar
     router-link.navigation-mobile__home(to='/' @click.native='closeMenu')
       img.navigation-mobile__logo(src='/static/simply-straight-logo.png', alt='Simply Straight by Snow Logo')

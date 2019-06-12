@@ -8,12 +8,17 @@
     &--alt
       background: radial-gradient(rgba($c2, .42) 60%, rgba($black, .26)), linear-gradient(90deg, $c1, $c2)
 
+    .pages-simply-straight &
+      min-height: 360px
+
   &__image
     @include tablet
       position: relative
       left: 0
       width: 100%
       height: 400px
+      .pages-simply-straight &
+        height: 300px  
     position: absolute
     top: 0
     left: 50%

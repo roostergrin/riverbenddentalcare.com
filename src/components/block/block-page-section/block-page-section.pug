@@ -6,7 +6,7 @@
       .block-page-section__content
         h2.block-page-section__title(v-html='section.title')
         .block-page-section__text(v-html='section.text')
-        .block-page-section__link
+        .block-page-section__link(v-if='section.link')
           router-link(:to='section.link') Learn More
           AppIcon.block-page-section__icon(name='arrow')
         

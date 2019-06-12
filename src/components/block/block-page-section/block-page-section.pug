@@ -4,7 +4,7 @@
       img.sr-only(:src='section.image', :alt='section.title')
     .block-page-section__container
       .block-page-section__content
-        .block-page-section__title(v-html='section.title')
+        h2.block-page-section__title(v-html='section.title')
         .block-page-section__text(v-html='section.text')
         .block-page-section__link
           router-link(:to='section.link') Learn More

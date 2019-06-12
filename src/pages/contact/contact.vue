@@ -2,6 +2,7 @@
 
 <script>
 import HeroPages from 'components/hero/hero-pages/hero-pages'
+import PageSection from 'custom/custom-contact-section/custom-contact-section'
 
 export default {
   computed: {
@@ -10,7 +11,8 @@ export default {
     }
   },
   components: {
-    HeroPages
+    HeroPages,
+    PageSection
   }
 }
 </script>

@@ -6,7 +6,8 @@ export default {
     return {
       activeSlide: 0,
       lastSlide: false,
-      slides: ''
+      scrolled: null,
+      slides: null
     }
   },
   props: {
@@ -28,9 +29,11 @@ export default {
       if (this.activeSlide === (this.props.length - 1)) {
         this.lastSlide = true
         this.activeSlide = 0
+        this.scrolled = null
       } else {
         this.lastSlide = false
         this.activeSlide++
+        this.scrolled = this.activeSlide - 1
       }
     },
     goToSlide (i) {

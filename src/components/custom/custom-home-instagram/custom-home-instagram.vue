@@ -1,16 +1,16 @@
 <template lang="pug" src="./custom-home-instagram.pug"></template>
 
 <script>
+import InstagramGrid from 'block/block-instagram-grid/block-instagram-grid'
+
 export default {
   props: {
     props: {
       Type: Object
     }
   },
-  computed: {
-    feed () {
-      return this.$store.state.insta.slice(0, 12)
-    }
+  components: {
+    InstagramGrid
   }
 }
 </script>

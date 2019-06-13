@@ -11,7 +11,5 @@
         AppIcon.custom-home-instagram__icon(name='arrow')  
           
   .custom-home-instagram__lower
-    .custom-home-instagram__feed-wrapper
-      .custom-home-instagram__thumb(v-for='post, i in feed', :key='i', :href='post.link' target='_blank' rel='noopener noreferrer')
-        img.custom-home-instagram__image(:src='post.image')
+    InstagramGrid
         

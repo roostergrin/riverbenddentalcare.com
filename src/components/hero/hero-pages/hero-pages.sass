@@ -30,14 +30,30 @@
     @extend .overlay
     background: linear-gradient(to bottom, $c3, rgba($black, 0))
 
+  &__container
+    @extend .container
+    position: relative
+    height: 100%
+
   &__title
     position: absolute
     top: 50%
-    left: 50%
-    transform: translate(-50%, -50%)
+    transform: translate(0, -50%)
     text-transform: uppercase
     color: $c2
     font-size: 50px
+
+    &--left
+      left: calc((2/12) * 100%)
+
+      .pages-about &
+        left: calc(((2/12) * 100%) + 48px)
+
+    &--center
+      left: 50%
+
+    &--right
+      left: calc((7/12) * 100%)
 
     .pages-about &
       color: $white

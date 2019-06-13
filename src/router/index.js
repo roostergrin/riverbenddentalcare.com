@@ -19,7 +19,7 @@ const router = new VueRouter({
     {
       path: '/',
       name: 'Home',
-      navigation: false,
+      navigation: true,
       component: HomePage
     },
     {

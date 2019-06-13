@@ -1,0 +1,61 @@
+.block-accordion
+
+  &__container
+    @extend .container
+    @include tablet
+      flex-direction: column-reverse
+
+  &__col
+    &--left
+      @extend .col-8
+      position: relative
+      height: 380px
+
+    &--right
+      @extend .col-3
+      @extend .col-1--offset
+      @include tablet
+        padding: 0
+
+  &__content
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+
+  &__title
+    margin-bottom: .8rem
+
+  &__tab-container
+    @include tablet
+      display: flex
+      margin-bottom: 1rem
+    margin-top: .5rem
+
+  &__tab
+    @include tablet
+      border-top: none
+      border-right: 2px solid $c5
+      border-bottom: none
+      border-left: 2px solid $c5
+    transition: color .2s ease
+    border-top: 2px solid $c5
+    border-bottom: 2px solid $c5
+    cursor: pointer
+    padding: .6rem 1rem
+    text-transform: uppercase
+    letter-spacing: 0
+    color: $c2
+    font-family: $font-alt
+    font-size: 18px
+    font-weight: 700
+
+    &:not(:first-child)
+      @include tablet
+        margin-top: 0
+        margin-left: -2px
+      margin-top: -2px
+
+    &:hover
+      color: $c1

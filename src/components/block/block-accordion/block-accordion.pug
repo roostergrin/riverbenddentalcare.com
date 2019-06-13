@@ -1,0 +1,11 @@
+.block-accordion
+  .block-accordion__container
+    .block-accordion__col--left
+      transition-group(name='crossfade', tag='div')
+        .block-accordion__content(v-for='content, i in props.content', :key='"content" + i' v-show='active === i')
+          h1.block-accordion__title(v-html='content.title')
+          .block-accordion__text(v-html='content.text')  
+    .block-accordion__col--right
+      .block-accordion__tab-container
+        .block-accordion__tab(v-for='tab, i in props.tabs', :key='i' @click='toggleSection(i)' v-html='tab.label')
+        

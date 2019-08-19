@@ -3,7 +3,7 @@
 <script>
 import FinancialSection from 'custom/custom-financial-section/custom-financial-section'
 import HeroPages from 'components/hero/hero-pages/hero-pages'
-import InstagramGrid from 'block/block-instagram-grid/block-instagram-grid'
+import TreatmentsAccordion from 'block/block-accordion/block-accordion'
 
 export default {
   computed: {
@@ -14,7 +14,7 @@ export default {
   components: {
     FinancialSection,
     HeroPages,
-    InstagramGrid
+    TreatmentsAccordion
   }
 }
 </script>

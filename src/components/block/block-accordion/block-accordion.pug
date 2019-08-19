@@ -6,6 +6,8 @@
           h1.block-accordion__title(v-html='content.title')
           .block-accordion__text(v-html='content.text')  
     .block-accordion__col--right
-      .block-accordion__tab-container
-        .block-accordion__tab(v-for='tab, i in props.tabs', :key='i' @click='toggleSection(i)' v-html='tab.label')
-        
+      .block-accordion__tab-container--left
+        a.block-accordion__tab(href='#info', v-for='tab, i in props.tabs_left', :key='i' @click='toggleSection(i)' v-html='tab.label')
+      .block-accordion__tab-container--right
+        a.block-accordion__tab(href='#info', v-for='tab, j in props.tabs_right', :key='j' @click='toggleSection(j + 11)' v-html='tab.label')
+        .test(v-if='width', id='info')

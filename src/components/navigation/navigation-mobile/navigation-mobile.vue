@@ -18,6 +18,11 @@ export default {
       Type: Boolean
     }
   },
+  computed: {
+    contact () {
+      return this.$store.state.app.nav
+    }
+  },
   methods: {
     toggleMenu () {
       this.menuActive = !this.menuActive

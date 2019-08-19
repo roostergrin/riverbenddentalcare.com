@@ -3,7 +3,7 @@
 <script>
 import CustomSection from 'custom/custom-about-section/custom-about-section'
 import HeroPages from 'components/hero/hero-pages/hero-pages'
-import InstagramGrid from 'block/block-instagram-grid/block-instagram-grid'
+import BlockSections from 'block/block-page-section/block-page-section'
 
 export default {
   computed: {
@@ -14,7 +14,7 @@ export default {
   components: {
     CustomSection,
     HeroPages,
-    InstagramGrid
+    BlockSections
   }
 }
 </script>

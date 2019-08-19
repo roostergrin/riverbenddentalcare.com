@@ -1,8 +1,10 @@
 .navigation-mobile(:class="{ 'navigation-mobile--scrolling': scrolling}")
   .navigation-mobile__navbar
     router-link.navigation-mobile__home(to='/' @click.native='closeMenu')
-      img.navigation-mobile__logo(src='/static/simply-straight-logo.png', alt='Simply Straight by Snow Logo')
+      img.navigation-mobile__logo(src='/static/riverbenddentalcare-logo-temp-sm.png', alt='Riverbend Dental Care Logo')
     
+    .navigation-mobile__phone
+      a(:href='contact.phone.phone_link', v-html="'Call Now: ' + contact.phone.phone_number")
     .navigation-mobile__hamburger(@click='toggleMenu', :class='{"navigation-mobile__hamburger--active": menuActive }')
       span
       span

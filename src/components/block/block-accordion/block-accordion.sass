@@ -1,4 +1,5 @@
 .block-accordion
+  padding-bottom: 4em
 
   &__container
     @extend .container
@@ -7,15 +8,16 @@
 
   &__col
     &--left
-      @extend .col-8
+      @extend .col-6
       position: relative
-      height: 380px
+      height: 600px
 
     &--right
-      @extend .col-3
-      @extend .col-1--offset
+      @extend .col-6
+      // @extend .col-1--offset 
       @include tablet
-        padding: 0
+        padding: 0 0 2em
+      display: flex
 
   &__content
     position: absolute
@@ -33,12 +35,16 @@
       margin-bottom: 1rem
     margin-top: .5rem
 
+    &--left, &--right
+      @extend .col-6
+
   &__tab
     @include tablet
       border-top: none
       border-right: 2px solid $c5
       border-bottom: none
       border-left: 2px solid $c5
+    display: block
     transition: color .2s ease
     border-top: 2px solid $c5
     border-bottom: 2px solid $c5

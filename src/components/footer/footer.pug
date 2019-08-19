@@ -10,12 +10,11 @@ footer.footer(v-if='props')
           a.footer__social-link(v-for='social, i in props.social', :key='i', :href='social.link')
             AppIcon(:name='social.icon')
       .footer__item
-        .footer__title Simply Straight
-        p NO-CREDIT CHECK
-        p 0% IN-HOUSE FINANCING AVAILABLE      
+        .footer__title Riverbend Dental Care
+        a.footer__address(:href='props.address.address_href',v-html='props.address.address_text', target='_blank')     
   .footer__lower
     .footer__container
       .footer__copyright
-        | © {{ new Date().getFullYear() }} Simply Straight By Snow | Online Advantage by #[a(href='https://www.roostergrin.com' target='_blank' rel='noopener noreferrer') RoosterGrin Media]                
+        | © {{ new Date().getFullYear() }} Riverbend Dental Care | Online Advantage by #[a(href='https://www.roostergrin.com' target='_blank' rel='noopener noreferrer') RoosterGrin Media]                
         
       

@@ -9,6 +9,11 @@ export default {
       Type: Object
     }
   },
+  computed: {
+    contact () {
+      return this.$store.state.app.nav
+    }
+  },
   components: {
     ContactForm
   }

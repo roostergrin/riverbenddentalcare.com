@@ -36,6 +36,8 @@
     height: 100%
 
   &__title
+    @include phone-lg
+      font-size: 25px
     position: absolute
     top: 50%
     transform: translate(0, -50%)
@@ -44,16 +46,17 @@
     font-size: 50px
 
     &--left
+      @include tablet
+        top: 31%
+        left: calc((.5/12) * 100%)
       left: calc((2/12) * 100%)
-
-      .pages-about &
-        left: calc(((2/12) * 100%) + 48px)
 
     &--center
       left: 50%
 
     &--right
+      @include tablet
+        left: 45%
+      @include phone-lg
+        left: 38%
       left: calc((7/12) * 100%)
-
-    .pages-about &
-      color: $white

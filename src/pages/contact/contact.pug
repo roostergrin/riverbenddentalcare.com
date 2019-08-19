@@ -1,3 +1,5 @@
 .pages-contact(v-if='props')
-  HeroPages(:props='props.hero' titlePos='right')
+  HeroPages(:props='props.hero' titlePos='right') 
+  BlockHeader(:props='props.header')
+  BlockPageIframe(:props='props.sections_iframe')
   PageSection(:props='props.contact')

@@ -1,12 +1,73 @@
 .custom-contact-section
-  padding: 5rem 0
+  padding-bottom: 3rem
 
   &__container
     @extend .container
+    padding-top: 3rem
+
+  &__section
+    @include desktop
+      min-height: 650px
+    position: relative
+    background: radial-gradient(rgba($c2, .42) 60%, rgba($c4, .2)), linear-gradient(90deg, $c1, $c2)
+    min-height: 480px
+
+  &__frame
+    @include tablet
+      position: relative
+      left: 0
+      width: 100%
+      height: 400px
+      .pages-simply-straight &
+        height: 300px
+    position: absolute
+    top: 0
+    left: 50%
+    border: none
+    width: 50%
+    height: 100%
+
+  &__info-container
+    @extend .container
+
+  &__information
+    @extend .col-5
+    @include phone-lg
+      padding: 2rem 0
+    @include tablet
+      margin: 0
+      text-align: center
+    margin-left: 3rem
+    padding: 3rem 0
+    color: $white
+    font-size: 20px
+
+    a
+      color: $white
+      font-weight: 600
+
+      &:hover
+        color: $c1
+
+    p
+      margin: .5rem 0
+      font-weight: 400
+
+  &__hours
+
+    p
+      margin: 0
+      font-weight: 600
+
+    &--title
+      font-weight: 400
 
   &__content
     @extend .col-8
     @extend .col-2--offset
+
+    h2
+      padding: 0
 
   &__title
     margin-bottom: 2rem

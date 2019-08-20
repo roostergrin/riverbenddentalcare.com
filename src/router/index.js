@@ -24,42 +24,42 @@ const router = new VueRouter({
       component: HomePage
     },
     {
-      path: '/about/',
+      path: '/about',
       name: 'About',
       navigation: true,
       component: AboutPage
     },
     {
-      path: '/new-patients/',
+      path: '/new-patients',
       name: 'New Patients',
       navigation: true,
       component: SimplyStraightPage
     },
     {
-      path: '/treatments/',
+      path: '/treatments',
       name: 'Treatments',
       navigation: true,
       component: FinancialPage
     },
     {
-      path: '/technology/',
+      path: '/technology',
       name: 'Technology',
       navigation: true,
       component: TechnologyPage
     },
     {
-      path: '/contact/',
+      path: '/contact',
       name: 'Contact',
       navigation: true,
       component: ContactPage
     },
     {
-      path: '/thank-you/',
+      path: '/thank-you',
       navigation: false,
       component: ThankYouPage
     },
     {
-      path: '/styleguide/',
+      path: '/styleguide',
       name: 'Styleguide',
       navigation: false,
       component: Styleguide

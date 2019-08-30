@@ -1,24 +1,30 @@
 .custom-contact-section
   section.custom-contact-section__section
-    iframe.custom-contact-section__frame(:src='props.map')
     .custom-contact-section__info-container
       .custom-contact-section__information
-        p  
-          a(:href='contact.address.address_href', v-html='contact.address.address_text')
-        p Phone: 
-          a(:href='contact.phone.phone_link', v-html='contact.phone.phone_number')
-        p Fax: 
-          strong(v-html='contact.fax')
-        p Email: 
-          a(:href='contact.email.link', v-html='contact.email.text')
+        p  <strong>Riverbend Dental Care:</strong>
+        a(:href='contact.address.address_href', v-html='contact.address.address_text')
+        p <strong>Phone:</strong>
+        a(:href='contact.phone.phone_link', v-html='contact.phone.phone_number')
+        p <strong>Fax:</strong>
+        span(v-html='contact.fax')
+        p <strong>Email:</strong> 
+        a(:href='contact.email.link', v-html='contact.email.text')
         .custom-contact-section__hours 
-          .custom-contact-section__hours--title Hours: 
-          p MON: 9:00 - 4:00PM
-          p TUE: 9:00 - 4:00 PM
-          p WED: 12:00 - 8:00 PM
-          p THU: 9:00 - 4:00PM
-          p FRI : 7:30 - 1:00 PM
-          p SAT : ONCE PER MONTH 9:00 - 2:00 PM 
+          .custom-contact-section__hours--title <strong>Hours:</strong>
+          p 
+            span <strong>Mon:</strong> 9:00am - 4:00pm
+          p 
+            span <strong>Tue:</strong> 9:00am - 4:00pm
+          p 
+            span <strong>Wed:</strong> 12:00am - 8:00pm
+          p 
+            span <strong>Thu:</strong> 9:00am - 4:00pm
+          p 
+            span <strong>Fri:</strong> 7:30am - 1:00pm
+          p 
+            span <strong>Sat:</strong> 9:00am - 2:00pm once per month
+    iframe.custom-contact-section__frame(:src='props.map')
   .custom-contact-section__container
     .custom-contact-section__content
       h1.custom-contact-section__title(v-html='props.title')

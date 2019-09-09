@@ -4,11 +4,11 @@ footer.footer(v-if='props')
       .footer__item
         .footer__title Call Today!
         a.footer__phone(:href='props.phone.phone_link' v-html='props.phone.phone_number')
-      .footer__item
-        .footer__title Follow Us
-        .footer__social-media
-          a.footer__social-link(v-for='social, i in props.social', :key='i', :href='social.link')
-            AppIcon(:name='social.icon')
+      //- .footer__item
+      //-   .footer__title Follow Us
+      //-   .footer__social-media
+      //-     a.footer__social-link(v-for='social, i in props.social', :key='i', :href='social.link')
+      //-       AppIcon(:name='social.icon')
       .footer__item
         .footer__title Riverbend Dental Care
         a.footer__address(:href='props.address.address_href',v-html='props.address.address_text', target='_blank')     

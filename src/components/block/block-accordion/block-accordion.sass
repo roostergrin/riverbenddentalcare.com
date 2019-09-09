@@ -8,9 +8,15 @@
 
   &__col
     &--left
+      @include tablet
+        height: 700px
+      @include phone-lg
+        height: 850px
+      @include phone
+        height: 1025px
       @extend .col-6
       position: relative
-      height: 630px
+      height: 900px
 
     &--right
       @extend .col-6

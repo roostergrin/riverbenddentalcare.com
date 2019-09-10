@@ -1,0 +1,9 @@
+.testimonials-main__wrapper
+  h2.testimonials-main__title(v-html='testimonials.testimonials.title')
+  .testimonials-main__section(v-for='testimonial, i in testimonials.testimonials.content', :key='i', :class="{ 'testimonials-main__section--first': i === 0 && activeSlide === (testimonials.testimonials.content.length - 1), 'testimonials-main__section--scrolled': activeSlide > i, 'testimonials-main__section--not-scrolled': activeSlide < i, 'testimonials-main__section--active': activeSlide === i, 'testimonials-main__section--last': i === (testimonials.testimonials.content.length - 1) && lastSlide }")
+    .testimonials-main__content
+      q.testimonials-main__text(v-html="testimonial.text")
+      span.testimonials-main__person(v-html="' - ' + testimonial.person")
+      
+  .testimonials-main__pagination
+    .testimonials-main__indicator(v-for='dot, i in slides', :key='i', :class="{ 'testimonials-main__indicator--active': activeSlide === i }" @click='goToSlide(i)')

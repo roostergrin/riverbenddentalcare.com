@@ -1,0 +1,20 @@
+.photo-gallery
+  h1
+    padding: 3rem 2rem
+    text-align: center
+  
+  &__images
+    display: flex
+    flex-wrap: wrap
+    justify-content: space-evenly
+
+  &__image
+    @include tablet
+      width: 90%
+      height: 50vw
+      min-height: 200px
+    margin: 0 2% 2%
+    background-position: center
+    background-size: cover
+    width: 45%
+    height: 25vw

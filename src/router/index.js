@@ -9,7 +9,7 @@ const ContactPage = () => import('@/pages/contact/contact')
 const FinancialPage = () => import('@/pages/financial/financial')
 const HomePage = () => import('@/pages/home/home')
 const SimplyStraightPage = () => import('@/pages/simply-straight/simply-straight')
-// const TechnologyPage = () => import('@/pages/technology/technology')
+const TechnologyPage = () => import('@/pages/technology/technology')
 const ThankYouPage = () => import('@/pages/thank-you/thank-you')
 
 Vue.use(VueRouter)
@@ -41,13 +41,12 @@ const router = new VueRouter({
       navigation: true,
       component: FinancialPage
     },
-
-    // {
-    //   path: '/technology',
-    //   name: 'Technology',
-    //   navigation: true,
-    //   component: TechnologyPage
-    // },
+    {
+      path: '/technology',
+      name: 'Technology',
+      navigation: true,
+      component: TechnologyPage
+    },
     {
       path: '/contact',
       name: 'Contact',

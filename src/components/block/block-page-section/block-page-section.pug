@@ -1,6 +1,6 @@
 .block-page-section
-  section.block-page-section__section(v-for='section, i in props', :key='i', :class="{ 'block-page-section__section--alt': i % 2 !== 0 }")
-    .block-page-section__image(:style="{ backgroundImage: 'url(' + section.image + ')' }")
+  section.block-page-section__section(v-if='!section.hidden', v-for='section, i in props', :key='i', :class="{ 'block-page-section__section--alt': i % 2 !== 0 }")
+    .block-page-section__image(:style="{ backgroundImage: 'url(' + section.image + ')' }", :class="{ 'block-page-section__image__small': section.small_image }")
       img.sr-only(:src='section.image', :alt='section.title')
     .block-page-section__container
       .block-page-section__content

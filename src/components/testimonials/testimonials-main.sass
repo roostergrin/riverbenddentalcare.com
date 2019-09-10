@@ -1,0 +1,70 @@
+.testimonials-main
+  &__title
+    padding: 2rem 3rem
+    text-align: center
+
+  &__wrapper
+    @include tablet
+      height: 500px
+    @include phone-lg
+      height: 700px
+    position: relative
+    width: 100%
+    height: 350px
+    overflow: hidden
+
+  &__section
+    position: absolute
+    transform: translate3d(100%, 0, 0)
+    transition: transform .65s cubic-bezier(.39, .58, .28, .992)
+    z-index: -1
+    width: 100%
+    height: 100%
+    overflow: hidden
+    will-change: transform
+
+    &--not-scrolled
+      transform: translate3d(100%, 0, 0)
+
+    &--scrolled,
+    &--last
+      transform: translate3d(-100%, 0, 0)
+      z-index: 1
+
+    &--scrolled
+      &.testimonials-main__section--first
+        transform: translate3d(100%, 0, 0)
+
+    &--active
+      transform: translate3d(0, 0, 0)
+      z-index: 2
+
+  &__content
+    @include tablet
+      padding: 0 1rem
+    padding: 0 5rem  
+    text-align: center
+
+  &__person
+    font-weight: 500
+
+  &__pagination
+    display: flex
+    position: absolute
+    bottom: 2.5rem
+    left: 50%
+    transform: translateX(-50%)
+    z-index: 10
+    cursor: pointer
+
+  &__indicator
+    transition: background .2s ease
+    z-index: 5
+    margin: 0 6px
+    border-radius: 50%
+    background: $c1
+    width: .8rem
+    height: .8rem
+
+    &--active
+      background: $c2

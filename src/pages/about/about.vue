@@ -4,7 +4,6 @@
 import CustomSection from 'custom/custom-about-section/custom-about-section'
 import HeroPages from 'components/hero/hero-pages/hero-pages'
 import BlockSections from 'block/block-page-section/block-page-section'
-import PhotoGallery from 'components/photo-gallery/photo-gallery'
 
 export default {
   computed: {
@@ -15,8 +14,7 @@ export default {
   components: {
     CustomSection,
     HeroPages,
-    BlockSections,
-    PhotoGallery
+    BlockSections
   }
 }
 </script>

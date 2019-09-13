@@ -10,6 +10,7 @@ const FinancialPage = () => import('@/pages/financial/financial')
 const HomePage = () => import('@/pages/home/home')
 const SimplyStraightPage = () => import('@/pages/simply-straight/simply-straight')
 const TechnologyPage = () => import('@/pages/technology/technology')
+const ClinicTour = () => import('@/pages/clinic-tour/clinic-tour')
 const ThankYouPage = () => import('@/pages/thank-you/thank-you')
 
 Vue.use(VueRouter)
@@ -28,6 +29,12 @@ const router = new VueRouter({
       name: 'About',
       navigation: true,
       component: AboutPage
+    },
+    {
+      path: '/clinic-tour',
+      name: 'Clinic Tour',
+      navigation: true,
+      component: ClinicTour
     },
     {
       path: '/new-patients',

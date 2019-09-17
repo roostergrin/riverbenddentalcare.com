@@ -1,4 +1,4 @@
-const route = 'https://riverbenddentalcare.roostertest2.com/wp-json'
+const route = 'https://riverbenddentalcare.com/wp-json'
 
 const api = () => {
   return route

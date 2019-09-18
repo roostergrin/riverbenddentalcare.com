@@ -14,7 +14,7 @@ function rg_serve_route () {
   global $wpdb;
 
   $data = json_decode(file_get_contents("php://input"), true);
-  $from = 'info@riverbenddentalcare.com';
+  $from = 'wordpress@riverbenddentalcare.com';
   $to = 'hello@riverbenddentalcare.com';
   $subject = 'Riverbend Dental Care Contact Form';
   $headers = array('Content-Type: text/html; charset=UTF-8');

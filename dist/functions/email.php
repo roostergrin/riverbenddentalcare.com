@@ -14,9 +14,9 @@ function rg_serve_route () {
   global $wpdb;
 
   $data = json_decode(file_get_contents("php://input"), true);
-  $from = 'info@wordpress.com';
-  $to = 'brandi@drsnow.com';
-  $subject = 'Simply Straight Contact Form';
+  $from = 'info@riverbenddentalcare.com';
+  $to = 'bryant@rootergrin.com';
+  $subject = 'Riverbend Dental Care Contact Form';
   $headers = array('Content-Type: text/html; charset=UTF-8');
   $message = '<html><body>';
   $message .= '<p><h4><strong>Form Submission by: </strong></h4>' . $data['name'] . '</p>';

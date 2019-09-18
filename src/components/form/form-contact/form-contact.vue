@@ -18,15 +18,15 @@ export default {
   methods: {
     validateBeforeSubmit () {
       this.$validator.validateAll()
-      .then(result => {
-        if (result) {
-          this.$el.children[0].submit()
-        } else {
-        }
-      })
-      .catch((e) => {
-        console.log(e)
-      })
+        .then(result => {
+          if (result) {
+            this.$el.children[0].submit()
+          } else {
+          }
+        })
+        .catch((e) => {
+          console.log(e)
+        })
     }
   }
 }

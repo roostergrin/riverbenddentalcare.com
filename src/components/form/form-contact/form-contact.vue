@@ -1,52 +1,32 @@
-<template lang="pug" src="./form-contact.pug"></template>
-
+<template lang='pug' src='./form-contact.pug'></template>
 <script>
-import api from 'api'
-import axios from 'axios'
+// import VueRecaptcha from 'vue-recaptcha'
 
 export default {
   data () {
     return {
       firstName: '',
       lastName: '',
-      email: '',
-      phone: '',
-      message: '',
-      postUrl: api + '/rg-mail/v1/contact',
+      emailAddress: '',
       formSubmitted: false
+      // verified: false
     }
   },
+  // components: {
+  //   VueRecaptcha
+  // },
   methods: {
-    validate () {
+    validateBeforeSubmit () {
       this.$validator.validateAll()
-        .then(res => {
-          if (res) {
-            this.onSubmit()
-          }
-        })
-        .catch(e => { console.log(e) })
-    },
-    onSubmit () {
-      this.formSubmitted = true
-      axios.post(this.postUrl, {
-        name: this.firstName + ' ' + this.lastName,
-        email: this.email,
-        phone: this.phone,
-        message: this.message
+      .then(result => {
+        if (result) {
+          this.$el.children[0].submit()
+        } else {
+        }
       })
-        .then(res => {
-          this.active = ''
-          this.clearForm()
-          this.$router.push('/thank-you')
-        })
-        .catch(e => { console.log(e) })
-    },
-    clearForm () {
-      this.firstName = ''
-      this.lastName = ''
-      this.email = ''
-      this.phone = ''
-      this.message = ''
+      .catch((e) => {
+        console.log(e)
+      })
     }
   }
 }

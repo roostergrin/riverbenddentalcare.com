@@ -12,6 +12,7 @@ const SimplyStraightPage = () => import('@/pages/simply-straight/simply-straight
 // const TechnologyPage = () => import('@/pages/technology/technology')
 // const ClinicTour = () => import('@/pages/clinic-tour/clinic-tour')
 const ThankYouPage = () => import('@/pages/thank-you/thank-you')
+const Sitemap = () => import('@/pages/sitemap/sitemap')
 
 Vue.use(VueRouter)
 
@@ -64,6 +65,11 @@ const router = new VueRouter({
       path: '/thank-you',
       navigation: false,
       component: ThankYouPage
+    },
+    {
+      path: '/sitemap',
+      navigation: false,
+      component: Sitemap
     },
     {
       path: '/styleguide',

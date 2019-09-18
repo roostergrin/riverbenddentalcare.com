@@ -1,0 +1,5 @@
+.pages-sitemap(v-if='props')
+  HeroPages(:props='props.hero')
+  // pre {{ props }}
+  .block-page-section__container
+    .sitemap-content(v-html:p="props.add_sitemap")

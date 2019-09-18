@@ -1,6 +1,11 @@
 .form-contact
-  form.form-contact__form(@submit.prevent='validate' method='post')
-    
+  form.form-contact__form(@submit.prevent='validateBeforeSubmit', v-if='!formSubmitted' action='https://riverbenddentalcare.com/thank-you' novalidate='novalidate' class='wpcf7-form' method='post')
+    div(style='display: none')
+      input(type='hidden' name='_wpcf7' value='4')
+      input(type='hidden' name='_wpcf7_version' value='5.1.4')
+      input(type='hidden' name='_wpcf7_locale' value='en_US')
+      input(type='hidden' name='_wpcf7_unit_tag' value='wpcf7-f4-o1')
+      input(type='hidden' name='_wpcf7_container_post' value='0')
     .form-contact__group.form-contact__group--inline
       .form-contact__item
         label.form-contact__label Your First Name #[span.danger *]
@@ -17,18 +22,16 @@
     .form-contact__group.form-contact__group--inline
       .form-contact__item
         label.form-contact__label Your Email Address #[span.danger *]
-        input.form-contact__input(name='email', v-model='email', v-validate="'required|email'", :class="{ 'input': true, 'form-contact__input--error': errors.has('email') && !formSuccess }")
+        input.form-contact__input(name='emailAddress', v-model='emailAddress', v-validate="'required|email'", :class="{ 'input': true, 'form-contact__input--error': errors.has('emailAddress') && !formSuccess }", type='email')
         .form-contact__message
-          span(v-show="errors.has('email') && !formSuccess") Please enter a valid email.
+          span(v-show="errors.has('emailAddress') && !formSuccess") Please enter a valid email.
     
       .form-contact__item.form-contact__item--not-required
         label.form-contact__label Your Phone Number
-        input.form-contact__input(name='phone', v-model='phone')
+        input.form-contact__input(name='phoneNumber', v-model='phoneNumber', type='text')
     
     .form-contact__group.form-contact__group--not-required
       label.form-contact__label Message
       textarea.form-contact__input.form-contact__input--textarea(name='message', v-model='message' rows='3')
-    
     .form-contact__group--button
-      button.form-contact__submit-button(@click='validate' type='submit', :disabled='formSubmitted')
-        span Submit
+      input.form-contact__submit-button(type='submit' @click="validateBeforeSubmit" value='Submit' onclick="ga(‘send’, ‘event’, ‘Form’, ‘Send Now’, 'Contact Us');")

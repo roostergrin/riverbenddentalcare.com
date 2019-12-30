@@ -10,7 +10,7 @@ const FinancialPage = () => import('@/pages/financial/financial')
 const HomePage = () => import('@/pages/home/home')
 const SimplyStraightPage = () => import('@/pages/simply-straight/simply-straight')
 // const TechnologyPage = () => import('@/pages/technology/technology')
-// const ClinicTour = () => import('@/pages/clinic-tour/clinic-tour')
+const ClinicTour = () => import('@/pages/clinic-tour/clinic-tour')
 const ThankYouPage = () => import('@/pages/thank-you/thank-you')
 const Sitemap = () => import('@/pages/sitemap/sitemap')
 
@@ -31,12 +31,12 @@ const router = new VueRouter({
       navigation: true,
       component: AboutPage
     },
-    // {
-    //   path: '/clinic-tour',
-    //   name: 'Clinic Tour',
-    //   navigation: true,
-    //   component: ClinicTour
-    // },
+    {
+      path: '/clinic-tour',
+      name: 'Clinic Tour',
+      navigation: true,
+      component: ClinicTour
+    },
     {
       path: '/new-patients',
       name: 'New Patients',

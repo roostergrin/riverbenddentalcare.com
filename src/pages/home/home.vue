@@ -9,7 +9,6 @@ import Testimonials from 'components/testimonials/testimonials-main'
 export default {
   computed: {
     props () {
-      console.log('hiiii')
       return this.$store.state.pages.home
     }
   },

@@ -1,4 +1,4 @@
 .photo-gallery
   h1(v-html="props.title")
   .photo-gallery__images
-    .photo-gallery__image(v-for="images, i in props.images", :style="{ backgroundImage: 'url(' + images.image + ')' }")
+    .photo-gallery__image(v-for="images, i in props.images", :style="{ backgroundImage: 'url(' + images.image + ')' }", :class="{ vertical: images.is_vertical}")

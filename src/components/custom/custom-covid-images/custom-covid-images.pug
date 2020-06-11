@@ -1,0 +1,5 @@
+section.custom-covid-images
+  .custom-covid-images__container
+    img(v-if='props.length > 0' v-for='(image,i) in props',
+      :key='"image " + i'
+      :src='image.image')

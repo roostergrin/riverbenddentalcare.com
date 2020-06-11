@@ -13,6 +13,7 @@ const SimplyStraightPage = () => import('@/pages/simply-straight/simply-straight
 const ClinicTour = () => import('@/pages/clinic-tour/clinic-tour')
 const ThankYouPage = () => import('@/pages/thank-you/thank-you')
 const Sitemap = () => import('@/pages/sitemap/sitemap')
+const Covid19 = () => import('@/pages/covid-19/covid-19')
 
 Vue.use(VueRouter)
 
@@ -60,6 +61,12 @@ const router = new VueRouter({
       name: 'Contact',
       navigation: true,
       component: ContactPage
+    },
+    {
+      path: '/covid-19',
+      name: 'COVID-19',
+      navigation: false,
+      component: Covid19
     },
     {
       path: '/thank-you',

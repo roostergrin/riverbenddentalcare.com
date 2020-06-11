@@ -1,6 +1,8 @@
 <template lang="pug" src="./navigation-mobile.pug"></template>
 
 <script>
+import CovidBanner from 'custom/custom-covid-banner/custom-covid-banner'
+
 export default {
   data () {
     return {
@@ -32,6 +34,9 @@ export default {
       this.menuActive = false
       document.body.classList.remove('body-stop')
     }
+  },
+  components: {
+    CovidBanner
   }
 }
 </script>

@@ -1,7 +1,8 @@
 .navigation-mobile(:class="{ 'navigation-mobile--scrolling': scrolling}")
+  CovidBanner(:props='props.covid_19_banner')
   .navigation-mobile__navbar
     router-link.navigation-mobile__home(to='/' @click.native='closeMenu')
-      img.navigation-mobile__logo(src='wp-content/themes/dist/static/riverbenddentalcare-logo-sm.svg', alt='Riverbend Dental Care Logo')
+      img.navigation-mobile__logo(:src='props.logo', alt='Riverbend Dental Care Logo')
     
     .navigation-mobile__phone
       a(:href='contact.phone.phone_link', v-html="'Call Now: ' + contact.phone.phone_number")

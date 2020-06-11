@@ -1,7 +1,8 @@
 .navigation-desktop(:class="{ 'navigation-desktop--scrolling': scrolling}")
+  CovidBanner(:props='props.covid_19_banner')
   .navigation-desktop__navbar
     router-link.navigation-desktop__home(to='/')
-      img.navigation-desktop__logo(src='wp-content/themes/dist/static/riverbend-logo.svg', alt='Riverbend Dental Care Logo')
+      img.navigation-desktop__logo(:src='props.logo', alt='Riverbend Dental Care Logo')
         
     .navigation-desktop__nav-primary
       .navigation-desktop__phone

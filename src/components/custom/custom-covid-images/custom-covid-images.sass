@@ -9,9 +9,11 @@
     justify-content: center
 
     img
+      @include tablet
+        height: 425px
       @include phone-lg
-        width: 80%
-        margin: 1rem auto
+        width: 100%
+        height: auto
       margin: 1rem
-      width: 45%
-      height: auto
+      width: auto
+      height: 450px

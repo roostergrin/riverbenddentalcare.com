@@ -20,5 +20,17 @@
     try {document.addEventListener("DOMContentLoaded", $buo_f,false)}
     catch(e){window.attachEvent("onload", $buo_f)}
   </script>
+
+  <script type="text/javascript">
+    (function(){
+    var AMP_KEY="tCe3Qoaw9dC7eGgatH5F9xFXsF4QHHK";window._AMP_CONF=window._AMP_CONF || {};window._AMP_CONF.key=AMP_KEY;
+    var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+    s1.async=true;
+    s1.src='https://embed.simplifeye.co/tCe3Qoaw9dC7eGgatH5F9xFXsF4QHHK/embed';
+    s1.charset='UTF-8';
+    s1.setAttribute('crossorigin','*');
+    s0.parentNode.insertBefore(s1,s0);
+    })();
+  </script>
 </body>
 </html>

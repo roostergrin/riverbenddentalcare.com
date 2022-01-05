@@ -4,6 +4,7 @@
 import GoogleTranslate from 'components/google-translate/google-translate'
 import TheFooter from 'components/footer/footer'
 import TheNavigation from 'components/navigation/navigation'
+import BaseBaseAccess from 'components/base-access/index'
 
 export default {
   async created () {
@@ -16,7 +17,8 @@ export default {
   components: {
     GoogleTranslate,
     TheFooter,
-    TheNavigation
+    TheNavigation,
+    BaseBaseAccess
   }
 }
 </script>

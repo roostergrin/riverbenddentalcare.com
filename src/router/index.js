@@ -2,6 +2,7 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Styleguide from '@/pages/styleguide/styleguide'
 import PageNotFound from '@/pages/404/404'
+import accessibilityStatement from '@/pages/accessibility-statement/accessibility-statement'
 import scrollBehavior from '@/shared/functionality/scroll-behavior'
 
 const AboutPage = () => import('@/pages/about/about')
@@ -77,6 +78,11 @@ const router = new VueRouter({
       path: '/sitemap',
       navigation: false,
       component: Sitemap
+    },
+    {
+      path: '/accessibility-statement',
+      navigation: false,
+      component: accessibilityStatement
     },
     {
       path: '/styleguide',

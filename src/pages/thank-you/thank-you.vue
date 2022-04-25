@@ -17,11 +17,29 @@ export default {
 
 <style>
 .pages-thank-you {
-  height: calc(100vh - 291px);
+  height: auto;
 }
-
 .pages-thank-you__text {
-  padding-top: 2rem;
+  padding: 3rem 1rem 5rem;
   text-align: center;
+}
+h2.pages-thank-you__heading {
+  text-align: center;
+  padding-top: 35px;
+  display: none;
+}
+@media only screen and (max-width: 767px)
+{
+ h2.pages-thank-you__heading {
+  display: block;
+}
+.pages-thank-you__text
+{
+  padding-top: 1rem;
+}
+.pages-thank-you .hero-pages__title--left
+{
+  display: none;
+}
 }
 </style>

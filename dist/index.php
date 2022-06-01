@@ -3,6 +3,20 @@
 <head>
     <meta charset="<?php bloginfo( 'charset' ); ?>">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script type="text/javascript">
+			window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+			ga('create', "UA-148170700-1", 'auto');
+			ga('send', 'pageview');
+		</script>
+    <script>
+    gtag('config', 'AW-10909308383/RqA8CLGuocIDEN-r-9Eo', {
+    'phone_conversion_number': '519-472-3866'
+    });
+    </script>
+    <script async="" src="https://www.google-analytics.com/analytics.js"></script>
+    <?php if(is_page('thank-you')){ ?>
+      gtag('event', 'conversion', {'send_to': 'AW-10909308383/DAtUCP2P7sEDEN-r-9Eo'});
+    <?php  } ?>
     <?php wp_head(); ?>
 </head>
 <body>

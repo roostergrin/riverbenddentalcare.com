@@ -15,7 +15,7 @@
     </script>
     <script async="" src="https://www.google-analytics.com/analytics.js"></script>
     <?php if(is_page('thank-you')){ ?>
-      gtag('event', 'conversion', {'send_to': 'AW-10909308383/DAtUCP2P7sEDEN-r-9Eo'});
+      <script> gtag('event', 'conversion', {'send_to': 'AW-10909308383/DAtUCP2P7sEDEN-r-9Eo'});</script>
     <?php  } ?>
     <?php wp_head(); ?>
 </head>

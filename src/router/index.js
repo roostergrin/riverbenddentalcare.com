@@ -41,7 +41,7 @@ const router = new VueRouter({
     },
     {
       path: '/new-patients',
-      name: 'New Patients',
+      name: 'New Patients/Online Booking',
       navigation: true,
       component: SimplyStraightPage
     },

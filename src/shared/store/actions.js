@@ -52,7 +52,14 @@ const actions = {
         }
 
         const data = response.data.reduce(
-          (allData, data) => ({ ...allData, [data.slug]: {title: data.title.rendered, ...data.acf} }),
+          (allData, data) => ({
+            ...allData,
+            [data.slug]: {
+              title: data.title.rendered,
+              excerpt: data.excerpt.rendered,
+              ...data.acf
+            }
+          }),
           {}
         )
         commit(GET_PAGES, data)

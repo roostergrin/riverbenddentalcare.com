@@ -1,11 +1,49 @@
 <?php
 
-// Redirect all requests to index.php so the Vue app is loaded and 404s aren't thrown
+// Keep SPA route aliases in sync with src/router/index.js page slug mappings.
+function get_spa_route_aliases() {
+  return array(
+    'new-patients' => 'simply-straight',
+    'treatments' => 'financial',
+  );
+}
+
+// Redirect all requests to index.php so the Vue app is loaded and 404s aren't thrown.
 remove_action('template_redirect', 'redirect_canonical');
 function remove_redirects() {
-    add_rewrite_rule('^/(.+)/?', 'index.php', 'top');
+  add_rewrite_rule('^(.+)?/?$', 'index.php', 'top');
 }
 add_action('init', 'remove_redirects');
+
+// Map friendly Vue URLs to existing WP page slugs before WP determines 404 state.
+function map_spa_route_aliases_to_pages( $query_vars ) {
+  if ( is_admin() || wp_doing_ajax() || ( defined( 'REST_REQUEST' ) && REST_REQUEST ) ) {
+    return $query_vars;
+  }
+
+  $request_uri = isset( $_SERVER['REQUEST_URI'] ) ? wp_unslash( $_SERVER['REQUEST_URI'] ) : '';
+  $request_path = parse_url( $request_uri, PHP_URL_PATH );
+
+  if ( ! is_string( $request_path ) ) {
+    return $query_vars;
+  }
+
+  $request_path = trim( $request_path, '/' );
+  $site_path = trim( (string) parse_url( home_url( '/' ), PHP_URL_PATH ), '/' );
+
+  if ( $site_path !== '' && strpos( $request_path, $site_path . '/' ) === 0 ) {
+    $request_path = substr( $request_path, strlen( $site_path ) + 1 );
+  }
+
+  $route_aliases = get_spa_route_aliases();
+  if ( array_key_exists( $request_path, $route_aliases ) ) {
+    $query_vars['pagename'] = $route_aliases[ $request_path ];
+    unset( $query_vars['name'] );
+  }
+
+  return $query_vars;
+}
+add_filter( 'request', 'map_spa_route_aliases_to_pages', 1 );
 
 function load_scripts() {
 	wp_enqueue_script( 'main-manifest', get_template_directory_uri() . '/static/js/manifest.js', array(), '1.0.0', true );
